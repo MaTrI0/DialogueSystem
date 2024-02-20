@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,7 +28,7 @@ public class DialogueTag : MonoBehaviour
                 throw new ArgumentException("Неверное оформление тега, просьба исправить.");
             }
 
-            string key = keyTag[0].Trim();
+            string key = keyTag[0]
             string value = keyTag[1].Trim();
 
             _tags.GetValues(key).Calling(value);

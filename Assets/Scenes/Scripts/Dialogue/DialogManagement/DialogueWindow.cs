@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using Ink.Runtime;
 using TMPro;
 using UnityEngine;
 
@@ -35,7 +34,7 @@ public class DialogueWindow : MonoBehaviour
     {
         if (value < 0)
         {
-            throw new ArgumentException("Значение задержки между буквами отрицательное!");
+            throw new ArgumentException("Значение задержки между буквами отрицательное!")
         }
 
         return value;
@@ -68,7 +67,7 @@ public class DialogueWindow : MonoBehaviour
         _displayText.text = text;
     }    
     
-    public void Add(string text)
+    private void Add(string text)
     {
         _displayText.text += text;
     }    
@@ -78,7 +77,7 @@ public class DialogueWindow : MonoBehaviour
         _displayText.text += letter;
     }    
     
-    public void ClearText()
+    private void ClearText()
     {
         SetText("");
     }

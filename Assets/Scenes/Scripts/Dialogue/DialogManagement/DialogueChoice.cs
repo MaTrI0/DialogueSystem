@@ -16,7 +16,7 @@ public class DialogueChoice : MonoBehaviour
         ushort index = 0;
         foreach (GameObject choice in _choices)
         {
-            _choicesText[index++] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            _choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
         }
     }
 
@@ -46,7 +46,7 @@ public class DialogueChoice : MonoBehaviour
 
     public void HideChoices()
     {
-        animator.SetBool("isStart", false);
+        animator.SetBool("isStart", true);
         foreach (var button in _choices)
         {
             button.SetActive(false);

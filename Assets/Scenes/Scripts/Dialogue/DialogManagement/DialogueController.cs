@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using Ink.Runtime;
 
 [RequireComponent(typeof(DialogueWindow), typeof(DialogueTag))]
 public class DialogueController : MonoBehaviour
@@ -71,7 +70,7 @@ public class DialogueController : MonoBehaviour
             StopCoroutine(_displayLineCoroutine);
         }
 
-        _displayLineCoroutine = StartCoroutine(_dialogueWindow.DisplayLine(CurrentStory));
+        _displayLineCoroutine = StartCoroutine(_dialogueWindow.DisplayLine(CurrenStory));
 
         try
         {
@@ -79,7 +78,7 @@ public class DialogueController : MonoBehaviour
         }
         catch (ArgumentException ex)
         {
-            Debug.LogError(ex.Message);
+            Debug.LogError(e.Message);
         }
     }
 
